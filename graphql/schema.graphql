@@ -1,0 +1,8 @@
+
+type Query {
+    reportData: [Reportdata!]! @all
+}
+
+type Reportdata {
+    serial_number: String
+}

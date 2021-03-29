@@ -1,5 +1,41 @@
 {
     "name": "munkireport/reportdata",
-    "description": "Module for munkireport.",
-    "license": "MIT"
+    "description": "ReportData is a core MunkiReport PHP module which stores a record of each machine.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mosen",
+            "email": "mosen@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "illuminate/support": "~5.5|~6.0|~7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~7.0",
+        "orchestra/testbench": "~3.7"
+    },
+    "archive": {
+        "exclude": ["/tests"]
+    },
+    "autoload": {
+        "psr-4": {
+            "Munkireport\\ReportData\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Munkireport\\ReportData\\Tests": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Munkireport\\ReportData\\ModuleServiceProvider"
+            ]
+        }
+    }
 }
